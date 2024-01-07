@@ -126,6 +126,7 @@ body {
                 .nav-element:hover {
                     opacity: 1 !important;
                     filter: blur(0) !important;
+                    cursor: pointer;
                 }
             }
         }
