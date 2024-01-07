@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        
+        <title>Inicio</title>
+        <link rel="stylesheet" href="style\style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Judith Obaya</h1>
+            <nav>    
+                <a href="records.html">Records</a>
+                <a href="viajes.html">Viajes</a>
+                <a href="fitness.html">Fitness</a>
+            </nav>
+            <section>
+                <h2>Atleta extrema y soñadora</h2>
+                <p>
+                    A estas alturas yo, mujer de 50 años y atleta extrema, quiero dejar huella generando historias únicas, en lugares diferentes, que nadie antes se propuso conseguir.
+                </p>
+                <p>
+                    En mis experiencias vivo momentos de gran dureza que hacen aflorar los sentimientos más íntimos y personales que propician la conexión con personas-público-marcas desde un ángulo diferencial.
+                </p>
+                <p>
+                    Quiero motivar a quienes han perdido la confianza, trasmitiendo valores como la autodeterminación, organización, confianza y respeto que en ocasiones olvidamos.
+                </p>
+            </section>
+            <img class="header-img" src="images/Fondo.png"/>
+        </header>
+        <main>
+            <div class="main-nav-block reveal">
+                <h2>Descubre más sobre mí</h2>
+                <div class="nav-container">
+                    <div class="side nav-element" id="records">
+                        <img class="nav-block-img" src="images/1de3.png"/>
+                        <p>RECORDS</p>
+                    </div>
+                    <div class="center nav-element" id="viajes">
+                        <img class="nav-block-img" src="images/2de3.png"/>
+                        <p>VIAJES</p>
+                    </div>
+                    <div class="side nav-element" id="fitness">
+                        <img class="nav-block-img" src="images/3de3.png"/>
+                        <p>FITNESS</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+
+        <script>
+            window.addEventListener("scroll", function() {
+                let reveals = document.querySelectorAll('.reveal');
+                
+                reveals.forEach(element => {
+                    
+                    let wHeight = window.innerHeight;
+                    let revealTop = element.getBoundingClientRect().top;
+                    let revealPoint = 150;
+
+                    if(revealTop < wHeight - revealPoint) {
+                        element.classList.add('active');
+                    } else {
+                        element.classList.remove('active');
+                    }
+                })
+            });
+
+            $(".nav-element").on("click", function() {
+                switch($(this).attr("id")) {
+                    case 'records':
+                        window.location.href = "records.html"
+                        break;
+                    case 'viajes':
+                        window.location.href = "viajes.html"
+                        break;
+                    case 'fitness':
+                        window.location.href = "fitness.html"
+                        break;
+                }
+            })
+        </script>
+    </body>
+</html>
