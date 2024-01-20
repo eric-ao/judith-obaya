@@ -9,81 +9,107 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
+        <div class="alert-container">
+            <div class="alert">
+                <div class="alert-icon">
+                    <img src="images/alert-icon.svg"/>
+                </div>
+                <p>Página en construcción ¡Vuelve más tarde!</p>
+            </div>
+        </div>
+        
         <header>
-            <h1>Judith Obaya</h1>
-            <nav>    
-                <a href="records.html">Records</a>
-                <a href="viajes.html">Viajes</a>
-                <a href="fitness.html">Fitness</a>
-            </nav>
-            <section>
-                <h2>Atleta extrema y soñadora</h2>
-                <p>
-                    A estas alturas yo, mujer de 50 años y atleta extrema, quiero dejar huella generando historias únicas, en lugares diferentes, que nadie antes se propuso conseguir.
-                </p>
-                <p>
-                    En mis experiencias vivo momentos de gran dureza que hacen aflorar los sentimientos más íntimos y personales que propician la conexión con personas-público-marcas desde un ángulo diferencial.
-                </p>
-                <p>
-                    Quiero motivar a quienes han perdido la confianza, trasmitiendo valores como la autodeterminación, organización, confianza y respeto que en ocasiones olvidamos.
-                </p>
-            </section>
-            <img class="header-img" src="images/Fondo.png"/>
-        </header>
-        <main>
-            <div class="main-nav-block reveal">
-                <h2>Descubre más sobre mí</h2>
-                <div class="nav-container">
-                    <div class="side nav-element" id="records">
-                        <img class="nav-block-img" src="images/1de3.png"/>
-                        <p>RECORDS</p>
+            <img src="images/Fondo.png"/>
+            <div class="nav">
+                <div class="nav-bar">
+                    <div class="nav-elements">
+                        <div class="nav-button">
+                            <p>Inicio</p>
+                        </div>
+                        <div class="nav-button">
+                            <p>Viajes</p>
+                        </div>
+                        <div class="nav-button">
+                            <p>Records</p>
+                        </div>
+                        <div class="nav-button">
+                            <p>Fitness</p>
+                        </div>
+                        <div class="nav-button">
+                            <p>Blog</p>
+                        </div>
+                        <div class="nav-button">
+                            <p>Sobre mí</p>
+                        </div>
                     </div>
-                    <div class="center nav-element" id="viajes">
-                        <img class="nav-block-img" src="images/2de3.png"/>
-                        <p>VIAJES</p>
+                    
+                </div>
+                <div class="nav-social">
+                    <div id="insta" class="social-button" onclick="redirigirInstagram()" onauxclick="abrirInstagram(event)">
+                        <img src="images/insta-icon.svg" />
                     </div>
-                    <div class="side nav-element" id="fitness">
-                        <img class="nav-block-img" src="images/3de3.png"/>
-                        <p>FITNESS</p>
+                    <div id="tiktok" class="social-button" onclick="redirigirTiktok()" onauxclick="abrirTiktok(event)">
+                        <img src="images/tiktok-icon.svg" />
+                    </div>
+                    <div id="youtube" class="social-button" onclick="redirigirYoutube()" onauxclick="abrirYoutube(event)">
+                        <img src="images/youtube-icon.svg" />
+                    </div>
+                    <div id="facebook" class="social-button" onclick="redirigirFacebook()" onauxclick="abrirFacebook(event)">
+                        <img src="images/facebook-icon.svg" />
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
+        </header>
 
-        </footer>
 
-        <script>
-            window.addEventListener("scroll", function() {
-                let reveals = document.querySelectorAll('.reveal');
-                
-                reveals.forEach(element => {
-                    
-                    let wHeight = window.innerHeight;
-                    let revealTop = element.getBoundingClientRect().top;
-                    let revealPoint = 150;
-
-                    if(revealTop < wHeight - revealPoint) {
-                        element.classList.add('active');
-                    } else {
-                        element.classList.remove('active');
-                    }
-                })
-            });
-
-            $(".nav-element").on("click", function() {
-                switch($(this).attr("id")) {
-                    case 'records':
-                        window.location.href = "records.html"
-                        break;
-                    case 'viajes':
-                        window.location.href = "viajes.html"
-                        break;
-                    case 'fitness':
-                        window.location.href = "fitness.html"
-                        break;
-                }
-            })
-        </script>
     </body>
+
+
+
+    <script>
+        //Instagram
+        function redirigirInstagram() {
+            console.log("Regirigir a Instagram...")
+            window.location.href = "https://www.instagram.com/judithobaya/";
+        }
+        function abrirInstagram(event) {
+            if(event.button === 1) {
+                console.log("Abrir en nueva pestaña Instagram...")
+                window.open("https://www.instagram.com/judithobaya/")
+            }
+        }
+        //Tiktok
+        function redirigirTiktok() {
+            console.log("Regirigir a Tiktok...")
+            window.location.href = "https://www.tiktok.com/@judithobaya";
+        }
+        function abrirTiktok(event) {
+            if(event.button === 1) {
+                console.log("Abrir en nueva pestaña Instagram...")
+                window.open("https://www.tiktok.com/@judithobaya")
+            }
+        }
+        //Youtube
+        function redirigirYoutube() {
+            console.log("Regirigir a Youtube...")
+            window.location.href = "https://www.youtube.com/channel/UCykzfsRxGzgYfLd-Vj6Vj9g";
+        }
+        function abrirYoutube(event) {
+            if(event.button === 1) {
+                console.log("Abrir en nueva pestaña Instagram...")
+                window.open("https://www.youtube.com/channel/UCykzfsRxGzgYfLd-Vj6Vj9g")
+            }
+        }
+        //Facebook
+        function redirigirFacebook() {
+            console.log("Regirigir a Facebook...")
+            window.location.href = "https://www.facebook.com/JudithObayaArenasss/";
+        }
+        function abrirFacebook(event) {
+            if(event.button === 1) {
+                console.log("Abrir en nueva pestaña Instagram...")
+                window.open("https://www.facebook.com/JudithObayaArenasss/")
+            } 
+        }
+    </script>
 </html>
