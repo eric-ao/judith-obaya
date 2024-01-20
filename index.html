@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width"/>
         
         <title>Inicio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="style\style.css"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="alert-container">
-            <div class="alert">
+            <div class="wip-alert">
                 <div class="alert-icon">
                     <img src="images/alert-icon.svg"/>
                 </div>
@@ -18,7 +21,41 @@
             </div>
         </div>
         
-        <header>
+
+
+        <!-- Barra de navegación para dispositivos móviles -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
+            <h1>Judith Obaya</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavMobile"
+                aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavMobile">
+                <div class="nav-elements">
+                    <div class="nav-button">
+                        <p>Inicio</p>
+                    </div>
+                    <div class="nav-button">
+                        <p>Viajes</p>
+                    </div>
+                    <div class="nav-button">
+                        <p>Records</p>
+                    </div>
+                    <div class="nav-button">
+                        <p>Fitness</p>
+                    </div>
+                    <div class="nav-button">
+                        <p>Blog</p>
+                    </div>
+                    <div class="nav-button">
+                        <p>Sobre mí</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Barra de navegación para dispositivos desktop -->
+        <header class="d-none d-lg-block">
             <img src="images/Fondo.png"/>
             <div class="nav">
                 <div class="nav-bar">
@@ -70,7 +107,7 @@
         //Instagram
         function redirigirInstagram() {
             console.log("Regirigir a Instagram...")
-            window.location.href = "https://www.instagram.com/judithobaya/";
+            window.open("https://www.instagram.com/judithobaya/");
         }
         function abrirInstagram(event) {
             if(event.button === 1) {
@@ -81,7 +118,7 @@
         //Tiktok
         function redirigirTiktok() {
             console.log("Regirigir a Tiktok...")
-            window.location.href = "https://www.tiktok.com/@judithobaya";
+            window.open("https://www.tiktok.com/@judithobaya");
         }
         function abrirTiktok(event) {
             if(event.button === 1) {
@@ -92,7 +129,7 @@
         //Youtube
         function redirigirYoutube() {
             console.log("Regirigir a Youtube...")
-            window.location.href = "https://www.youtube.com/channel/UCykzfsRxGzgYfLd-Vj6Vj9g";
+            window.open("https://www.youtube.com/channel/UCykzfsRxGzgYfLd-Vj6Vj9g");
         }
         function abrirYoutube(event) {
             if(event.button === 1) {
@@ -103,7 +140,7 @@
         //Facebook
         function redirigirFacebook() {
             console.log("Regirigir a Facebook...")
-            window.location.href = "https://www.facebook.com/JudithObayaArenasss/";
+            window.open("https://www.facebook.com/JudithObayaArenasss/");
         }
         function abrirFacebook(event) {
             if(event.button === 1) {
