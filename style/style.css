@@ -173,7 +173,7 @@ body {
     
 
     /* Barra de navegación version DESKTOP */
-    header {
+    .header-desktop {
         img {
             height: 35vh;
             width: 100%;
@@ -247,4 +247,84 @@ body {
         }
         
     }
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    @media screen and (min-width: 992px) {
+            .block-1 {
+                margin-top: 100px;
+                display: flex;
+                justify-content: space-evenly;
+
+                .block-1-content {
+                    width: 30%;
+                    padding: 25px;
+                    .block-1-blank {
+                        height: 50px;
+                    }
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            transform: scale(1.12);
+                            cursor: pointer;
+                        }
+                    }
+                    &.left {
+                        padding-top: 0;
+
+                        .block-1-blank{
+                            height: 75px;
+                        }
+                        h2 {
+                            color: #545454;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            margin-bottom: 50px;
+                        }
+                    }
+                }
+            }
+    }
+    @media screen and (max-width: 992px) {
+            .block-1 {
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+
+                .block-1-content {
+                    width: 53%;
+                    padding: 25px;
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            transform: scale(1.12);
+                            cursor: pointer;
+                        }
+                    }
+                    &.left {
+                        padding-top: 0;
+                        h2 {
+                            display: none;
+                        }
+                    }
+                    &.mid {
+                        margin-left: 47%;
+                        margin-top: -150px;
+                    }
+                    &.right {
+                        margin-top: -150px;
+                    }
+                }
+            }
+    }
+
+
 }

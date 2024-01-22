@@ -7,6 +7,8 @@
         <title>Inicio</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="style\style.css"/>
+        <link rel="icon" href="images/logo.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -15,53 +17,26 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet"/>
     </head>
     <body>
-        <div class="alert-container">
-            <div class="wip-alert">
-                <div class="alert-icon">
-                    <img src="images/alert-icon.svg"/>
-                </div>
-                <p>Página en construcción ¡Vuelve más tarde!</p>
-            </div>
-        </div>
-        
-
-
-        <!-- Barra de navegación para dispositivos móviles -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
-            <h1>Judith Obaya</h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavMobile"
-                aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavMobile">
-                <div class="nav-elements">
-                    <div class="nav-button">
-                        <p>Inicio</p>
+        <header>
+            <div class="alert-container">
+                <div class="wip-alert">
+                    <div class="alert-icon">
+                        <img src="images/alert-icon.svg"/>
                     </div>
-                    <div class="nav-button">
-                        <p>Viajes</p>
-                    </div>
-                    <div class="nav-button">
-                        <p>Records</p>
-                    </div>
-                    <div class="nav-button">
-                        <p>Fitness</p>
-                    </div>
-                    <div class="nav-button">
-                        <p>Blog</p>
-                    </div>
-                    <div class="nav-button">
-                        <p>Sobre mí</p>
-                    </div>
+                    <p>Página en construcción ¡Vuelve más tarde!</p>
                 </div>
             </div>
-        </nav>
-
-        <!-- Barra de navegación para dispositivos desktop -->
-        <header class="d-none d-lg-block">
-            <img src="images/Fondo.png"/>
-            <div class="nav">
-                <div class="nav-bar">
+            
+    
+    
+            <!-- Barra de navegación para dispositivos móviles -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
+                <h1>Judith Obaya</h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavMobile"
+                    aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavMobile">
                     <div class="nav-elements">
                         <div class="nav-button">
                             <p>Inicio</p>
@@ -82,25 +57,76 @@
                             <p>Sobre mí</p>
                         </div>
                     </div>
-                    
                 </div>
-                <div class="nav-social">
-                    <div id="insta" class="social-button" onclick="redirigirInstagram()" onauxclick="abrirInstagram(event)">
-                        <img src="images/insta-icon.svg" />
+            </nav>
+    
+            <!-- Barra de navegación para dispositivos desktop -->
+            <div class="header-desktop d-none d-lg-block">
+                <img src="images/Fondo.png"/>
+                <div class="nav">
+                    <div class="nav-bar">
+                        <div class="nav-elements">
+                            <div class="nav-button">
+                                <p>Inicio</p>
+                            </div>
+                            <div class="nav-button">
+                                <p>Viajes</p>
+                            </div>
+                            <div class="nav-button">
+                                <p>Records</p>
+                            </div>
+                            <div class="nav-button">
+                                <p>Fitness</p>
+                            </div>
+                            <div class="nav-button">
+                                <p>Blog</p>
+                            </div>
+                            <div class="nav-button">
+                                <p>Sobre mí</p>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div id="tiktok" class="social-button" onclick="redirigirTiktok()" onauxclick="abrirTiktok(event)">
-                        <img src="images/tiktok-icon.svg" />
-                    </div>
-                    <div id="youtube" class="social-button" onclick="redirigirYoutube()" onauxclick="abrirYoutube(event)">
-                        <img src="images/youtube-icon.svg" />
-                    </div>
-                    <div id="facebook" class="social-button" onclick="redirigirFacebook()" onauxclick="abrirFacebook(event)">
-                        <img src="images/facebook-icon.svg" />
+                    <div class="nav-social">
+                        <div id="insta" class="social-button" onclick="redirigirInstagram()" onauxclick="abrirInstagram(event)">
+                            <img src="images/insta-icon.svg" />
+                        </div>
+                        <div id="tiktok" class="social-button" onclick="redirigirTiktok()" onauxclick="abrirTiktok(event)">
+                            <img src="images/tiktok-icon.svg" />
+                        </div>
+                        <div id="youtube" class="social-button" onclick="redirigirYoutube()" onauxclick="abrirYoutube(event)">
+                            <img src="images/youtube-icon.svg" />
+                        </div>
+                        <div id="facebook" class="social-button" onclick="redirigirFacebook()" onauxclick="abrirFacebook(event)">
+                            <img src="images/facebook-icon.svg" />
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
+        
+        <main>
+            <div class="block-1">
+                <div class="block-1-content left">
+                    <div class="block-1-blank">
+                        <h2>Bienvenido a mi universo</h2>
+                    </div>
+                    <img src="images/block-1-viajes.png" />
+                </div>
+                <div class="block-1-content mid">
+                    <img src="images/block-1-records.png" />
+                    <div class="block-1-blank">
 
+                    </div>
+                </div>
+                <div class="block-1-content right">
+                    <div class="block-1-blank">
+
+                    </div>
+                    <img src="images/block-1-fitness.png" />
+                </div>
+            </div>
+        </main>
 
     </body>
 
